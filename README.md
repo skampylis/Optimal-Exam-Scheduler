@@ -1,40 +1,46 @@
 # **Optimal-Exam-Scheduler**
 
-## **Περιγραφή**
-Πρόγραμμα σε **Prolog** για τον βέλτιστο προγραμματισμό εξετάσεων μεταπτυχιακών φοιτητών. Συγκεκριμένα, υλοποιεί predicates για τη δημιουργία, αξιολόγηση και βελτιστοποίηση προγραμμάτων εξετάσεων, ελαχιστοποιώντας τις συγκρούσεις (περισσότερες από 2 εξετάσεις/εβδομάδα) και μεγιστοποιώντας το συνολικό σκορ.
+## **Description**
+
+A **Prolog** program for the optimal scheduling of postgraduate student exams. Specifically, it implements predicates for creating, evaluating, and optimizing exam schedules, minimizing conflicts (more than 2 exams per week) and maximizing the total score.
 
 ---
 
 ### **🚀 Project Overview**
-- **Προγραμματισμός Εξετάσεων**: Δημιουργία προγράμματος εξετάσεων για 2,5 εβδομάδες (3 ημέρες, 3 ημέρες, 2 ημέρες).
-- **Βελτιστοποίηση Συγκρούσεων**: Ελαχιστοποίηση του αριθμού φοιτητών που δίνουν πάνω από 2 εξετάσεις την ίδια εβδομάδα.
-- **Αξιολόγηση Σκορ**: Υπολογισμός σκορ με βάση τις εξεταστικές ημέρες και τους πολλαπλασιαστές παρουσίας.
+
+* **Exam Scheduling**: Generates exam schedules for 2.5 weeks (3 days, 3 days, 2 days).
+* **Conflict Optimization**: Minimizes the number of students taking more than 2 exams in the same week.
+* **Score Evaluation**: Calculates the score based on exam days and attendance multipliers.
 
 ---
 
 ### **🔍 Key Features**
-- **Δημιουργία Προγραμμάτων**: Επιστροφή όλων των δυνατών προγραμμάτων μέσω backtracking.
-- **Εκτίμηση Συγκρούσεων**: Μέτρηση φοιτητών που δίνουν παραπάνω από 2 εξετάσεις/εβδομάδα.
-- **Βελτιστοποίηση Επιλογών**: Επιλογή προγραμμάτων με ελάχιστες συγκρούσεις και μέγιστο συνολικό σκορ.
+
+* **Schedule Generation**: Returns all possible schedules through backtracking.
+* **Conflict Estimation**: Counts students taking more than 2 exams per week.
+* **Optimization Selection**: Chooses schedules with minimal conflicts and maximum total score.
 
 ---
 
 ### **🛠️ Technical Highlights**
-- **Backtracking & Permutations**: Δημιουργία και επεξεργασία συνδυασμών μαθημάτων.
-- **Ακριβής Υπολογισμός Σκορ**: Χρήση συναρτήσεων για την αξιολόγηση κάθε προγράμματος βάσει παρουσιών και ημερών.
-- **Ευέλικτη Εφαρμογή**: Υποστηρίζει πλήρη επιστροφή εναλλακτικών λύσεων για βέλτιστη επιλογή.
+
+* **Backtracking & Permutations**: Generation and evaluation of course combinations.
+* **Accurate Score Calculation**: Functions for evaluating each schedule based on attendance and exam days.
+* **Flexible Application**: Supports returning all alternative solutions for optimal selection.
 
 ---
 
 ### **📂 Code Structure**
-- **main.pl**: Περιέχει όλους τους ορισμούς των predicates.
-  - **schedule/3**: Δημιουργία τυχαίων προγραμμάτων εξετάσεων.
-  - **schedule_errors/4**: Υπολογισμός συγκρούσεων ανά πρόγραμμα.
-  - **minimal_schedule_errors/4**: Εύρεση προγραμμάτων με ελάχιστες συγκρούσεις.
-  - **score_schedule/4**: Υπολογισμός συνολικού σκορ του προγράμματος.
-  - **maximum_score_schedule/4**: Επιλογή του προγράμματος με τις βέλτιστες επιδόσεις.
+
+* **main.pl**: Contains all predicate definitions.
+
+  * **schedule/3**: Generates random exam schedules.
+  * **schedule_errors/4**: Calculates conflicts per schedule.
+  * **minimal_schedule_errors/4**: Finds schedules with the fewest conflicts.
+  * **score_schedule/4**: Computes the total score of each schedule.
+  * **maximum_score_schedule/4**: Selects the schedule with the best performance.
 
 ---
 
-**🏷️ Tags**: **Prolog**, **Exam Scheduling**, **Βελτιστοποίηση**, **Backtracking**, **Λογικός Προγραμματισμός**
-**🌟 Concept**: *"Ένα σύστημα προγραμματισμού εξετάσεων που στοχεύει στη βέλτιστη οργάνωση του εξεταστικού προγράμματος, ελαχιστοποιώντας συγκρούσεις και μεγιστοποιώντας το συνολικό σκορ."*
+**🏷️ Tags**: **Prolog**, **Exam Scheduling**, **Optimization**, **Backtracking**, **Logic Programming**
+**🌟 Concept**: *"An exam scheduling system aimed at the optimal organization of exam timetables, minimizing conflicts and maximizing the total score."*
